@@ -2,7 +2,7 @@
 
 <?php
 
-require_once 'src/Dates/BirthDays.php';
+require_once 'vendor/autoload.php';
 
 $birthDate = '1972-10-28';
 $days = new \Evgeniyholon\Dates\BirthDays($birthDate);
