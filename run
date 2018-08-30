@@ -2,13 +2,10 @@
 
 <?php
 
+require_once 'src/Dates/BirthDays.php';
+
 $birthDate = '1972-10-28';
-$todayDate = date('Y-m-d');
-
-$birthTime = strtotime($birthDate);
-$todayTime = strtotime($todayDate);
-
-$totalSecs = $todayTime - $birthTime;
-$totalDays = floor($totalSecs / 3600 / 24);
+$days = new \Evgeniyholon\Dates\BirthDays($birthDate);
+$totalDays = $days->findTotalDays();
 
 echo "$birthDate : $totalDays days\n\n";
